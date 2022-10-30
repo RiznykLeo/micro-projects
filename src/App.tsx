@@ -1,11 +1,14 @@
 import React from 'react';
-import Grid from "./components/Grid";
+import {Route, Routes} from "react-router";
+import TicTacPage from "./pages/TicTacPage";
+import HomePage from "./pages/HomePage";
 
 function App() {
     return (
-        <div className='flex flex-col justify-center items-center w-screen h-screen'>
-            <Grid/>
-        </div>
+        <Routes>
+            <Route element={<HomePage/>} path={"/"}/>
+            <Route element={<TicTacPage/>} path={"/tic-tac"}/>
+        </Routes>
     );
 }
 
