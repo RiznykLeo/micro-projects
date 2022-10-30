@@ -55,7 +55,12 @@ function Grid() {
 
     return (
         <>
-            <div className='border p-2 gap-1.5
+            <div className='py-2 px-4 rounded mb-3
+            bg-white font-bold hover:cursor-default'>
+                {status}
+            </div>
+
+            <div className='p-2 gap-1.5
          bg-green-500 grid grid-cols-3 grid-rows-3 justify-center items-center rounded-md'>
                 {renderCell(0)}
                 {renderCell(1)}
@@ -68,10 +73,9 @@ function Grid() {
                 {renderCell(8)}
 
             </div>
-            <div>
-                {status}
-            </div>
-            <div className="border px-4 py-2 border-2 border-red-700 bg-red-600 text-white rounded-md "
+            <div className=" mt-3 px-7 py-2 bg-red-500
+            text-white rounded-md hover:cursor-pointer
+             hover:bg-red-600 transition-all"
                  onClick={handleRestart}>
                 Restart
             </div>
